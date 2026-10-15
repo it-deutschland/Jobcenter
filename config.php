@@ -21,7 +21,7 @@ function db(): PDO
 {
     static $connection = null;
     if ($connection === null) {
-        $host = getenv('EURO_DB_HOST') ?: 'localhost';
+        $host = getenv('EURO_DB_HOST') ?: '217.160.153.219';
         $port = getenv('EURO_DB_PORT') ?: '3306';
         $name = getenv('EURO_DB_NAME') ?: 'csa';
         $connection = new PDO(
