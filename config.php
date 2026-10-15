@@ -23,11 +23,11 @@ function db(): PDO
     if ($connection === null) {
         $host = getenv('EURO_DB_HOST') ?: 'localhost';
         $port = getenv('EURO_DB_PORT') ?: '3306';
-        $name = getenv('EURO_DB_NAME') ?: 'euro';
+        $name = getenv('EURO_DB_NAME') ?: 'csa';
         $connection = new PDO(
             "mysql:host={$host};port={$port};dbname={$name};charset=utf8mb4",
-            getenv('EURO_DB_USER') ?: '',
-            getenv('EURO_DB_PASSWORD') ?: '',
+            getenv('EURO_DB_USER') ?: 'root',
+            getenv('EURO_DB_PASSWORD') ?: 'TheReal1337!',
             [
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
                 PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
